@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic ( 8 ) Ball</title>
+    <link rel="stylesheet" href="mainStyle.css">
+  </head>
+
+  <header>
+    <h1>The Magic ( 8 ) Ball</h1>
+  </header>
+ 
+<body class="container">
+
+<main>
+  <img src="./img/eightball.png" alt="eightball"  width="300" />
+
+    <nav>
+            <li class="crumb"><a href="./game.html">Play the Magic 8 Ball Game</a></li>
+    </nav>
+
+
+    <div>
+      <h3>Feeling Down?</h3>
+        <button id="complimentButton">Get a compliment</button>
+    </div>
+
+    <div>
+      <h3>Crack the Fortune Cookie!</h3>
+      <img src="./img/fortune-cookie.gif" alt="fortune cookie"  width="200" />
+        <button id="fortuneButton">Get a fortune</button>
+    </div>
+
+      
+  
+      <div id="create-q">
+        <h3>Ask Me Anything!</h3>
+      <button id="all">Display ( 8 ) Ball Questions</button>
+      <form id="create-quest">
+          <label for="new-quest">Create a question:</label>
+          <input type="text" id="new-quest" placeholder="Yes or no question"/>
+          <label for="new-expect">The outcome you want:</label>
+          <input id="new-expect"  placeholder ="Yay, nay, or maybe"></input>
+          <button id="create-btn">Create question</button>
+      </form>
+    </div>
+
+      <div id="delete-sec">
+      <h3>Delete latest question:</h3>
+      <form id="delete-btn">
+          <button id="del-btn">Delete Question</button>
+      </form>
+      </div>
+
+      <h2>8 Ball Questions</h2>
+  
+      <section>
+        
+      </section>
+
+</main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+    
+  </body>
+</html>
+
+

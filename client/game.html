@@ -1,0 +1,44 @@
+<body style="height: 100vh; background: #111; text-align: center;touch-action: manipulation;">
+    <canvas id="c" width="700" height="600"></canvas>
+    <script>
+      context = c.getContext("2d");
+      const bird = new Image();
+      bird.src = "./img/eightball.png";
+      birdX = birdDY = score = bestScore = 0;
+      interval = topPipeBottomY = 20;
+      birdSize = 50;
+      pipeWidth = 30;
+      birdY = pipeGap = 150;
+      canvasSize = pipeX = 700;
+      c.onclick = () => (birdDY = 9) ;
+      setInterval(() => {
+        context.fillStyle = "#006400";
+        context.fillRect(0,0,canvasSize,canvasSize); // Draw sky
+        birdY -= birdDY -= 0.5; // Gravity
+        context.drawImage(bird, birdX, birdY, birdSize * (512/512), birdSize); // Draw bird
+        context.fillStyle = "#8b5e34";
+        pipeX -= 9; // Move pipe
+        pipeX < -pipeWidth && // Pipe off screen?
+          ((pipeX = canvasSize), (topPipeBottomY = pipeGap * Math.random())); // Reset pipe and randomize gap.
+        context.fillRect(pipeX, 0, pipeWidth, topPipeBottomY); // Draw top pipe
+        context.fillRect(pipeX, topPipeBottomY + pipeGap, pipeWidth, canvasSize); // Draw bottom pipe
+        context.fillStyle = "black";
+        context.fillText(score++, 9, 25); // Increase and draw score
+        bestScore = bestScore < score ? score : bestScore; // New best score?
+        context.fillText(`Best: ${bestScore}`, 9, 50); // Draw best score
+        (((birdY < topPipeBottomY || birdY > topPipeBottomY + pipeGap) && pipeX < birdSize * (512/512))// Bird hit pipe?
+         || birdY > canvasSize) && // Bird falls off screen
+        ((birdDY = 0), (birdY = 200), (pipeX = canvasSize), (score = 0)); // Bird died
+      }, interval)
+    </script>
+<br>
+<p>How long can you stay alive?</p>
+
+<nav>
+    <li class="crumb"><a href="./index.html">Magic 8 Ball Home</a></li>
+</nav>  
+
+<audio controls>
+    <source src="audio/Soul.mp3" type="audio/mpeg">
+</audio>
+  </body>
