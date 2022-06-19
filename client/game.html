@@ -1,14 +1,14 @@
-<body style="height: 100vh; background: #111; text-align: center;touch-action: manipulation;">
-    <canvas id="c" width="700" height="600"></canvas>
+<body style="height: 100vh; background: rgb(113, 2, 113); text-align: center;touch-action: manipulation;">
+    <canvas id="c" width="700" height="400"></canvas>
     <script>
       context = c.getContext("2d");
       const bird = new Image();
       bird.src = "./img/eightball.png";
       birdX = birdDY = score = bestScore = 0;
-      interval = topPipeBottomY = 20;
+      interval = topPipeBottomY = 24;
       birdSize = 50;
-      pipeWidth = 30;
-      birdY = pipeGap = 150;
+      pipeWidth = 24;
+      birdY = pipeGap =120;
       canvasSize = pipeX = 700;
       c.onclick = () => (birdDY = 9) ;
       setInterval(() => {
@@ -17,7 +17,7 @@
         birdY -= birdDY -= 0.5; // Gravity
         context.drawImage(bird, birdX, birdY, birdSize * (512/512), birdSize); // Draw bird
         context.fillStyle = "#8b5e34";
-        pipeX -= 9; // Move pipe
+        pipeX -= 10; // Move pipe
         pipeX < -pipeWidth && // Pipe off screen?
           ((pipeX = canvasSize), (topPipeBottomY = pipeGap * Math.random())); // Reset pipe and randomize gap.
         context.fillRect(pipeX, 0, pipeWidth, topPipeBottomY); // Draw top pipe

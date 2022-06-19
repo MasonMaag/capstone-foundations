@@ -1,3 +1,316 @@
-.wiseBtn{
-    color:blue;
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background-color: rgb(113, 2, 113);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.766);
+    border: 15px;
+    border-style: groove;
+    border-color: gray rgba(65, 64, 64, 0.978);
+    box-shadow: 0px 0px 25px 15px black ;
+    box-shadow: 150px 250px 270px 280px rgba(0, 0, 0, 0.896);
+}
+
+h1 {
+    height: fit-content;
+    width: fit-content;
+    background-color: rgb(113, 2, 113);
+    color: black;
+    padding:10px;
+    font-weight: 900;
+    font-size: 50px;
+    border: 15px;
+    border-style:groove;
+    border-color: black rgba(86, 84, 84, 0.783);
+    box-shadow: 0px 0px 15px 1px white ;
+    text-align: center;
+}
+
+#gameTag{
+    color: blue;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#gameLink{
+    display: flex;
+    border-color: purple;
+    border-style: groove;
+    background-color: rgba(153, 150, 150, 0.074);
+    border-width:5px;
+    width: fit-content;
+    padding: 5px;
+    margin-left: 42.5%;
+}
+
+#ballPic {
+    border-radius: 50%;
+    border-style: double solid;
+    border-width: 10px;
+    border-color: purple rgba(196, 11, 221, 0.519);
+    box-shadow: 0px 0px 10px 20px rgb(22, 1, 35);
+}
+
+#ballpiccon{
+    margin-right: 8%;
+}
+
+#ballCon{
+    display: flex;
+    justify-content:center;
+    margin-top: 1.5%;
+    margin-right: 5%;
+}
+
+#compCon{
+    background-color: rgba(153, 150, 150, 0.074);
+    padding: 10px;
+    margin-right: 100px;
+    border-width:10px;
+    border-color: purple;
+    border-style: groove;
+}
+
+#compHead{
+    color:white;
+    font-weight: 800;
+    margin-left: 22%;
+}
+
+#compGif{
+    border-radius: 50%;
+    border-width:2px;
+    border-color: purple;
+    border-style: solid;
+}
+
+#complimentButton {
+    padding: 5px;
+    font-weight: 800;
+    font-size: large;
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.83);
+    border-width: 5px;
+    border-style: double;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 1px black;
+}
+
+#compbtncon{
+    margin-left: 39px;
+    margin-top: 2%;
+}
+
+#fortCon{
+    background-color: rgba(153, 150, 150, 0.074);
+    padding: 15px;
+    margin-left: -3%;
+    border-width:10px;
+    border-color: purple;
+    border-style: groove;
+}
+
+#fortHead{
+    color:white;
+    font-weight: 800;
+}
+
+#fortGif{
+    border-radius: 50%;
+    border-width:2px;
+    border-color: purple;
+    border-style: solid;
+}
+
+#fortuneButton {
+    padding: 5px;
+    font-weight: 800;
+    font-size: large;
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.83);
+    border-width: 5px;
+    border-style: double;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 1px black;
+}
+
+#fortbtncon{
+    margin-left: 18px;
+    margin-top: 2%;
+}
+
+#all {
+    display: flex;
+    margin-left: 42.5%;
+    /* border-radius: 50%; */
+    /* margin-top: -4%; */
+    padding:5px;
+    font-weight: 800;
+    font-size: large;
+    border-style: double;
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.83);
+    border-width: 5px;
+    box-shadow: 0px 0px 20px 1px black;
+    cursor: pointer;
+}
+
+section {
+    display:inline-block;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    color: white;
+    margin-left: 29%;
+    height: fit-content;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.713);
+    text-align: center;
+    /* padding-left: 4%; */
+    margin-top: -20px;
+    padding: 1%
+}
+
+#new-quest{
+    margin-right: 20px;
+}
+
+#newqueststyle{
+    background-color: rgba(153, 150, 150, 0.074);
+    padding: 15px;
+    border-width:10px;
+    border-color: purple;
+    border-style: groove;
+}
+
+h3 {
+    margin-right:1%;
+}
+
+#delete-sec {
+    display: flex;
+    margin-left: 25%;
+    /* margin-bottom: -4%; */
+    color: white;
+}
+
+#del-btn {
+    margin-top: 8%;
+    padding: 5px;
+    font-weight: 800;
+    border-style: double;
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.83);
+    border-width: 5px;
+    box-shadow: 0px 0px 20px 1px black;
+    cursor: pointer;
+}
+
+/* #create-quest {
+    color: white;
+    font-size: large;
+    font-weight: 400;
+    margin-left: 42.5%;
+    margin-top: 10px;
+} */
+
+#eightHead{
+    color:white;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.713);
+    padding:10px;
+    margin-left:2.4%;
+}
+
+#createCon{
+    display: flex;
+    /* justify-content: space-between; */
+    color: white;
+    font-size: large;
+    font-weight: 400;
+    margin-left: 21%;
+    margin-top: 10px;
+}
+
+/* #questHead{
+    margin-right:5%;
+}
+
+#new-quest{
+    margin-left: -5%;
+} */
+
+input {
+    height: 20px;
+    width:200px;
+    /* display: flex; */
+    margin-top: 1.6%;
+    border-style: double;
+    border-color: black;
+    border-width: 5px;
+}
+
+#create-btn {
+    height: fit-content;
+    width:fit-content;
+    margin-left: 20px;
+    margin-top:20px;
+    padding: 5px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    border-style: double;
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.83);
+    border-width: 5px;
+    box-shadow: 0px 0px 20px 1px black;
+    cursor: pointer;
+}
+
+#ballPic:hover {
+    /* box-shadow: 0px 0px 100px 1px darkmagenta; */
+    transition: transform .9s, box-shadow 0s;
+    transform: rotate(360deg);
+    cursor: pointer;
+  }
+
+/* hover effects */
+#complimentButton:hover {
+    border-color: darkmagenta;
+    box-shadow: 0px 0px 30px 1px black;
+    color: darkmagenta;
+    transform: scale(1.1, 1.1);
+}
+
+#fortuneButton:hover {
+    border-color: darkmagenta;
+    box-shadow: 0px 0px 30px 1px black;
+    color: darkmagenta;
+    transform: scale(1.1, 1.1);
+}
+
+#all:hover {
+    border-color: darkmagenta;
+    box-shadow: 0px 0px 30px 1px black;
+    color: darkmagenta;
+    transform: scale(1.1, 1.1);
+}
+
+#create-btn:hover {
+    border-color: darkmagenta;
+    box-shadow: 0px 0px 30px 1px black;
+    color: darkmagenta;
+    transform: scale(1.1, 1.1);
+}
+
+#del-btn:hover {
+    border-color: darkmagenta;
+    box-shadow: 0px 0px 30px 1px black;
+    color: darkmagenta;
+    transform: scale(1.1, 1.1);
 }

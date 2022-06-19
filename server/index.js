@@ -35,48 +35,13 @@ let quests = [
         mainQuest: 'Is the 8 ball always right?', 
         mainExpect: ['Yay!', ]
     },
-    {
-        id: 3, 
-        mainQuest: 'Am I cool?', 
-        mainExpect: ['Yay!', ]
-    },
-    {
-        id: 4, 
-        mainQuest: 'Is the sky blue?', 
-        mainExpect: ['Yay!', ]
-    },
-    {
-        id: 5, 
-        mainQuest: 'Should I go sky diving?', 
-        mainExpect: ['Yay!', ]
-    },
-    {
-        id: 6, 
-        mainQuest: 'Should I eat Mcdonalds?', 
-        mainExpect: ['Yay!', ]
-    },
-    {
-        id: 7, 
-        mainQuest: 'Should I go work out?', 
-        mainExpect: ['Nay!', ]
-    },
-    {
-        id: 8, 
-        mainQuest: 'Should I take a nap?', 
-        mainExpect: ['Yay!', ]
-    },
-    {
-        id: 9, 
-        mainQuest: 'Should I play video games?', 
-        mainExpect: ['Yay!', ]
-    },
 ]
 
 app.get('/api/quests', (req, res) => {
     res.status(200).send(quests)
 })
 
-let id = 10
+let id = 3
 
 app.post('/api/quest', (req, res) => {
     let newQuest = {...req.body, id}

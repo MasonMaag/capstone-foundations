@@ -37,12 +37,13 @@ fortuneBtn.addEventListener('click',getFortune)
     questSheet.classList.add('quest-sheet')
 
     questSheet.innerHTML = `
+    <div id="newqueststyle">
     <h3>${newQuest.mainQuest} </h3>
     <h4>Expected:</h4>
     <li>${newQuest.mainExpect[0]}</li>
     <h4>Ask the 8 ball:</h4>
     <button onclick="getAnswer()">Ask!</button>
-    <br>`;
+    </div>`;
   
     questContainer.appendChild(questSheet)
   }
@@ -112,5 +113,6 @@ const getAnswer = () => {
     .then(res => {
         const data = res.data;
         alert("Magic 8 ball says : " + data);
-    });
+    })
+    .catch(error => console.log(error))
 };
