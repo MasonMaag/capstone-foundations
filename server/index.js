@@ -2,6 +2,13 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
+var Rollbar = require("rollbar");
+var rollbar = new Rollbar({
+  accessToken: 'c04bc76715c641538fb717a869573747',
+  captureUncaught: true,
+  captureUnhandledRejections: true
+});
+
 app.use(cors());
 
 app.use(express.static('client'))
@@ -55,13 +62,14 @@ app.post('/api/quest', (req, res) => {
     quests.unshift(newQuest)
     res.status(200).send(quests)
     id++
+    rollbar.log('user created a question');
 })
 
 app.delete('/api/quest', (req, res) => {
 if (quests[0].id>1){
     quests.shift()}
-
     res.status(200).send(quests)
+    rollbar.log('user deleted a question');
 })
 
 const port = process.env.PORT || 5000
