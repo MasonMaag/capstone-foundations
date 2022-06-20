@@ -42,7 +42,7 @@ fortuneBtn.addEventListener('click',getFortune)
     <h4>Expected:</h4>
     <li>${newQuest.mainExpect[0]}</li>
     <h4>Ask the 8 ball:</h4>
-    <button onclick="getAnswer()">Ask!</button>
+    <button onclick="getAnswer()" id="askBtn">Ask!</button>
     </div>`;
   
     questContainer.appendChild(questSheet)

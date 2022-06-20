@@ -1,1 +1,88 @@
-canvas { background: white }
+canvas { 
+    background: white;
+    border-width: 30px;
+    border-color: saddlebrown;
+    border-style: solid;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background-color: rgb(113, 2, 113);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.766);
+    border: 15px;
+    border-style: groove;
+    border-color: gray rgba(65, 64, 64, 0.978);
+    box-shadow: 0px 0px 25px 15px black ;
+    box-shadow: 150px 250px 270px 280px rgba(0, 0, 0, 0.896);
+}
+
+h1 {
+    height: fit-content;
+    width: fit-content;
+    background-color: rgb(113, 2, 113);
+    color: black;
+    padding:10px;
+    font-weight: 900;
+    font-size: 50px;
+    border: 15px;
+    border-style:groove;
+    border-color: black rgba(86, 84, 84, 0.783);
+    box-shadow: 0px 0px 15px 1px white ;
+    text-align: center;
+}
+
+#homeTag{
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#homeLink{
+    display: flex;
+    border-color: purple;
+    border-style: groove;
+    background-color: rgb(52, 5, 52);
+    border-width:5px;
+    width: fit-content;
+    padding: 5px;
+    margin-left: 45%;
+}
+
+#instCon{
+    background-color: rgba(153, 150, 150, 0.074);
+    padding: 1px;
+    /* margin-right: 100px; */
+    margin-top: -.1%;
+    border-width:10px;
+    border-color: purple;
+    border-style: groove;
+}
+
+#controls{
+    margin-left: 15%;
+    margin-top: -10%;
+}
+
+#tunes{
+    margin-right: 20%;
+    margin-bottom: -.2%;
+}
+
+h2,h3{
+    color: whitesmoke;
+}
+
+#homeTag:hover {
+    border-color: darkmagenta;
+    box-shadow: 0px 0px 30px 1px black;
+    color: darkmagenta;
+    transform: scale(1.1, 1.1);
+}

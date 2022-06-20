@@ -1,44 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Magic (8) Ball Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,100;1,300;1,500&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gameStyle.css">
+</head>
+
 <body style="height: 100vh; background: rgb(113, 2, 113); text-align: center;touch-action: manipulation;">
+  <header>
+    <h1>The Magic (8) Ball Game</h1>
+  </header>
+  <div id="homeLink">
+    <nav>
+      <a id="homeTag" href="./index.html">Magic 8 Ball home</a></li>
+    </nav>
+  </div>
     <canvas id="c" width="700" height="400"></canvas>
+    
     <script>
       context = c.getContext("2d");
-      const bird = new Image();
-      bird.src = "./img/eightball.png";
-      birdX = birdDY = score = bestScore = 0;
-      interval = topPipeBottomY = 24;
-      birdSize = 50;
-      pipeWidth = 24;
-      birdY = pipeGap =120;
-      canvasSize = pipeX = 700;
-      c.onclick = () => (birdDY = 9) ;
+      const ball = new Image();
+      ball.src = "./img/eightball.png";
+      ballX = ballDY = score = bestScore = 0;
+      interval = topStickBottomY = 24;
+      ballSize = 50;
+      stickWidth = 30;
+      ballY = stickGap =120;
+      canvasSize = stickX = 700;
+      c.onclick = () => (ballDY = 9) ;
       setInterval(() => {
         context.fillStyle = "#006400";
-        context.fillRect(0,0,canvasSize,canvasSize); // Draw sky
-        birdY -= birdDY -= 0.5; // Gravity
-        context.drawImage(bird, birdX, birdY, birdSize * (512/512), birdSize); // Draw bird
-        context.fillStyle = "#8b5e34";
-        pipeX -= 10; // Move pipe
-        pipeX < -pipeWidth && // Pipe off screen?
-          ((pipeX = canvasSize), (topPipeBottomY = pipeGap * Math.random())); // Reset pipe and randomize gap.
-        context.fillRect(pipeX, 0, pipeWidth, topPipeBottomY); // Draw top pipe
-        context.fillRect(pipeX, topPipeBottomY + pipeGap, pipeWidth, canvasSize); // Draw bottom pipe
-        context.fillStyle = "black";
+        context.fillRect(0,0,canvasSize,canvasSize); // Draw table
+        ballY -= ballDY -= 0.5; // Gravity
+        context.drawImage(ball, ballX, ballY, ballSize * (512/512), ballSize); // Draw ball
+        context.fillStyle = "#96705B";
+        stickX -= 10; // Move stick
+        stickX < -stickWidth && // Stick off screen?
+          ((stickX = canvasSize), (topStickBottomY = stickGap * Math.random())); // Reset stick and randomize gap.
+        context.fillRect(stickX, 0, stickWidth, topStickBottomY); // Draw top stick
+        context.fillRect(stickX, topStickBottomY + stickGap, stickWidth, canvasSize); // Draw bottom stick
+        context.fillStyle ="black";
         context.fillText(score++, 9, 25); // Increase and draw score
         bestScore = bestScore < score ? score : bestScore; // New best score?
         context.fillText(`Best: ${bestScore}`, 9, 50); // Draw best score
-        (((birdY < topPipeBottomY || birdY > topPipeBottomY + pipeGap) && pipeX < birdSize * (512/512))// Bird hit pipe?
-         || birdY > canvasSize) && // Bird falls off screen
-        ((birdDY = 0), (birdY = 200), (pipeX = canvasSize), (score = 0)); // Bird died
+        (((ballY < topStickBottomY || ballY > topStickBottomY + stickGap) && stickX < ballSize * (512/512))// Ball hit stick?
+         || ballY > canvasSize) && // Ball falls off screen
+        ((ballDY = 0), (ballY = 200), (stickX = canvasSize), (score = 0)); // Ball died
       }, interval)
     </script>
-<br>
-<p>How long can you stay alive?</p>
 
-<nav>
-    <li class="crumb"><a href="./index.html">Magic 8 Ball Home</a></li>
-</nav>  
-
-<audio controls>
+<div id="instCon">
+<h2>Try to avoid the pool sticks, and see how long you long you can survive!</h2>
+<h3>Controls: Click anywhere on the pool table to make the ball jump!</h3>
+<div id="audio">
+  <h3 id="tunes">Listen to some tunes while you play!</h3>
+  <audio controls id="controls">
     <source src="audio/Soul.mp3" type="audio/mpeg">
-</audio>
+  </audio>
+  </div>
+  
+    
+
+</div>
+
+
+
   </body>
+</html>

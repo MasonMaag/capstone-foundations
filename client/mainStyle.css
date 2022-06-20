@@ -33,7 +33,7 @@ h1 {
 }
 
 #gameTag{
-    color: blue;
+    color: blueviolet;
     font-size: 20px;
     font-weight: 700;
 }
@@ -148,8 +148,6 @@ h1 {
 #all {
     display: flex;
     margin-left: 42.5%;
-    /* border-radius: 50%; */
-    /* margin-top: -4%; */
     padding:5px;
     font-weight: 800;
     font-size: large;
@@ -163,7 +161,6 @@ h1 {
 
 section {
     display:inline-block;
-    /* flex-wrap: wrap; */
     justify-content: center;
     color: white;
     margin-left: 29%;
@@ -171,9 +168,20 @@ section {
     width: 40%;
     background-color: rgba(0, 0, 0, 0.713);
     text-align: center;
-    /* padding-left: 4%; */
     margin-top: -20px;
     padding: 1%
+}
+
+#askBtn{
+    padding: 3px;
+    font-weight: 800;
+    font-size: large;
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.83);
+    border-width: 5px;
+    border-style: double;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 1px black;
 }
 
 #new-quest{
@@ -195,7 +203,6 @@ h3 {
 #delete-sec {
     display: flex;
     margin-left: 25%;
-    /* margin-bottom: -4%; */
     color: white;
 }
 
@@ -211,14 +218,6 @@ h3 {
     cursor: pointer;
 }
 
-/* #create-quest {
-    color: white;
-    font-size: large;
-    font-weight: 400;
-    margin-left: 42.5%;
-    margin-top: 10px;
-} */
-
 #eightHead{
     color:white;
     height: fit-content;
@@ -230,7 +229,6 @@ h3 {
 
 #createCon{
     display: flex;
-    /* justify-content: space-between; */
     color: white;
     font-size: large;
     font-weight: 400;
@@ -238,18 +236,9 @@ h3 {
     margin-top: 10px;
 }
 
-/* #questHead{
-    margin-right:5%;
-}
-
-#new-quest{
-    margin-left: -5%;
-} */
-
 input {
     height: 20px;
     width:200px;
-    /* display: flex; */
     margin-top: 1.6%;
     border-style: double;
     border-color: black;
@@ -272,6 +261,12 @@ input {
     cursor: pointer;
 }
 
+#audio{
+    margin-left: 1.5%;
+    margin-top: .5%;
+}
+
+/* hover effects */
 #ballPic:hover {
     /* box-shadow: 0px 0px 100px 1px darkmagenta; */
     transition: transform .9s, box-shadow 0s;
@@ -279,7 +274,6 @@ input {
     cursor: pointer;
   }
 
-/* hover effects */
 #complimentButton:hover {
     border-color: darkmagenta;
     box-shadow: 0px 0px 30px 1px black;
@@ -309,6 +303,20 @@ input {
 }
 
 #del-btn:hover {
+    border-color: darkmagenta;
+    box-shadow: 0px 0px 30px 1px black;
+    color: darkmagenta;
+    transform: scale(1.1, 1.1);
+}
+
+#askBtn:hover{
+    border-color: darkmagenta;
+    box-shadow: 0px 0px 30px 1px black;
+    color: darkmagenta;
+    transform: scale(1.1, 1.1);
+}
+
+#gameTag:hover {
     border-color: darkmagenta;
     box-shadow: 0px 0px 30px 1px black;
     color: darkmagenta;
