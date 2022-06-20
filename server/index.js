@@ -4,6 +4,8 @@ const app = express();
 
 app.use(cors());
 
+app.use(express.static('client'))
+
 app.use(express.json());
 
 const {
@@ -11,6 +13,10 @@ const {
      getFortune,
      getAnswer,
  } = require('./controller')
+
+ app.get('/', (req,res) => {
+    res.sendFile(path.join(__dirname, '../client/index.html'))
+ })
 
 
 app.get("/api/compliment", getCompliment);
@@ -22,18 +28,18 @@ app.get('/api/answer', getAnswer);
 let quests = [
     {
         id: 0,
-        mainQuest: 'Am I a coding master?', 
+        mainQuest: 'Is Andrew a ukelele god?', 
         mainExpect: ['Yay!']
     }, 
     {
         id: 1, 
-        mainQuest: 'Will I ever be a millionaire?', 
-        mainExpect: ['Yay!', ]
+        mainQuest: 'Is DJ afraid of ducks?', 
+        mainExpect: ['Yay!']
     },
     {
         id: 2, 
-        mainQuest: 'Is the 8 ball always right?', 
-        mainExpect: ['Yay!', ]
+        mainQuest: 'Should the name Lucas be spelled withakay?', 
+        mainExpect: ['Yay!']
     },
 ]
 
@@ -58,7 +64,8 @@ if (quests[0].id>1){
     res.status(200).send(quests)
 })
 
+const port = process.env.PORT || 5000
 
-app.listen(4010, () => console.log("Server running on 4010"));
+app.listen(port, () => console.log(`Server running on ${port}`));
 
 

@@ -15,7 +15,7 @@ const getFortune = (req, res) => {
     }
 
 const getAnswer = (req,res) => {
-        const answers = ['It is certain.', 'It is decidedly so.', 'Without a doubt.', 'Yes, definetely.', 'You may rely on it.', 'As I see it, yes.', 'Most likely.', 'Outlook good.','Yay!','Signs point to yes.','Reply hazy try again.','Ask again later.','Better not until you know.','Connot predict now.','Concentrate and ask again.','Nay!',"Don't cont on it.",'My reply is no.','My sources say no.','Outlook not so good.','Very doubtful.','Sorry, I was playing Billards. What was the question?', 'Probably.','Maybe.'];
+        const answers = ['It is certain.', 'It is decidedly so.', 'Without a doubt.', 'Yes, definetely.', 'You may rely on it.', 'As I see it, yes.', 'Most likely.', 'Outlook good.','Yay!','Signs point to yes.','Reply hazy try again.','Ask again later.','Connot predict now.','Concentrate and ask again.','Nay!',"Don't cont on it.",'My reply is no.','My sources say no.','Outlook not so good.','Very doubtful.','Sorry, I was playing Billards. What was the question?', 'Probably.','Maybe.'];
 
         let randomIndex = Math.floor(Math.random() * answers.length);
         let randomAnswer = answers[randomIndex];

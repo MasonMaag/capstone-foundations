@@ -21,7 +21,7 @@ header {
     border-style: groove;
     border-color: gray rgba(65, 64, 64, 0.978);
     box-shadow: 0px 0px 25px 15px black ;
-    box-shadow: 150px 250px 270px 280px rgba(0, 0, 0, 0.896);
+    box-shadow: 150px 200px 270px 280px rgba(0, 0, 0, 0.896);
 }
 
 h1 {
