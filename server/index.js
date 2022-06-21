@@ -39,17 +39,17 @@ app.get('/api/answer', getAnswer);
 let quests = [
     {
         id: 0,
-        mainQuest: 'Is Andrew a ukelele god?', 
+        mainQuest: 'Will I be a millionaire?', 
         mainExpect: ['Yay!']
     }, 
     {
         id: 1, 
-        mainQuest: 'Is DJ afraid of ducks?', 
+        mainQuest: 'Does my future hold anything big?', 
         mainExpect: ['Yay!']
     },
     {
         id: 2, 
-        mainQuest: 'Should the name Lucas be spelled withakay?', 
+        mainQuest: 'Will the Magic 8 Ball end up in the trash if it does not give me the answer I want?', 
         mainExpect: ['Yay!']
     },
 ]

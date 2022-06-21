@@ -1,0 +1,8 @@
+Welcome to my Magic 8 Ball app. This project is hosted publically on heroku, and can be found at this link https://magical-8-ball.herokuapp.com. The source code can be found on my github at https://github.com/MasonMaag/capstone-foundations.
+
+The main focus of this project was to bring the magic 8 ball to life. Making it give compliments, tell fortunes, and create and edit questions for the 8 ball. Also, there is a flappy bird inspired game to play and have fun! Listen to the magic ball theme song while you're browsing the main page, or playing the game.
+
+This project is coded using Javascript, html, css, and canvas. The packages included in this project are axios calls, and express server support.
+
+This app uses get, post, and delete. The compliment, forune, and ask buttons all use get functionality. Pulling responses from an array and alerting and posting. The create question button is using a post method to post the users input onto the body. The delete button is using a delete method to remove the latest question from the body. 
+The 8 ball game is using HTML 5 and canvas. Clicking on the canvas makes the ball move to avoid the pool sticks. 
