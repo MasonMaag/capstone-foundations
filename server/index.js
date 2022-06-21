@@ -1,7 +1,10 @@
 const express = require("express");
 const path = require('path')
 const cors = require("cors");
+
 const app = express();
+
+const port = process.env.PORT || 5000
 
 var Rollbar = require("rollbar");
 var rollbar = new Rollbar({
@@ -11,16 +14,16 @@ var rollbar = new Rollbar({
 });
 
 app.use(cors());
-
 app.use(express.static('client'))
-
 app.use(express.json());
 
+const listCtrl = require("./controller")
+
 const {
-     getCompliment,
-     getFortune,
-     getAnswer,
- } = require('./controller')
+    getCompliment,
+    getFortune,
+    getAnswer
+} = listCtrl
 
  app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'))
@@ -73,7 +76,7 @@ if (quests[0].id>1){
     rollbar.log('user deleted a question');
 })
 
-const port = process.env.PORT || 5000
+
 
 app.listen(port, () => console.log(`Server running on ${port}`));
 
