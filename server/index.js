@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5000;
 
 var Rollbar = require("rollbar");
 var rollbar = new Rollbar({
@@ -25,8 +25,8 @@ const {
     getAnswer
 } = listCtrl
 
- app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, '../client/index.html'))
+ app.get('/js', (req,res) => {
+    res.sendFile(path.join(__dirname, './client/main.js'))
  })
 
 
