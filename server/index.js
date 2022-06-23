@@ -13,6 +13,8 @@ var rollbar = new Rollbar({
   captureUnhandledRejections: true
 });
 
+app.use('/js', express.static(path.join(__dirname, 'client/main.js')))
+
 app.use(cors());
 app.use(express.static('client'))
 app.use(express.json());
@@ -77,7 +79,7 @@ if (quests[0].id>1){
     rollbar.log('user deleted a question');
 })
 
-app.use('/js', express.static(path.join(__dirname, 'client/main.js')))
+
 
 app.listen(port, () => console.log(`Server running on ${port}`));
 
