@@ -28,7 +28,7 @@ const {
 //  app.get('/main.js', (req,res) => {
 //     res.sendFile(path.join(__dirname, './client/main.js'))
 //  })
-app.use('/js', express.static(path.join(__dirname, 'client/main.js')))
+
 
 
 app.get("/api/compliment", getCompliment);
@@ -77,7 +77,7 @@ if (quests[0].id>1){
     rollbar.log('user deleted a question');
 })
 
-
+app.use('/js', express.static(path.join(__dirname, 'client/main.js')))
 
 app.listen(port, () => console.log(`Server running on ${port}`));
 
