@@ -9,7 +9,7 @@ const deleteBtn = document.querySelector('#delete-btn')
 
 
 // const baseURL = `http://localhost:5000/api`
-const baseURL = `https://magical-8-ball.herokuapp.com`
+const baseURL = `https://magical-8-ball.herokuapp.com/api`
 
 //Get compliment alert
   const getCompliment = () => {
