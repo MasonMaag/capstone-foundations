@@ -1,10 +1,16 @@
-const express = require("express");
+const express = require('express');
 const path = require('path')
-const cors = require("cors");
+// const cors = require('cors');
 
 const app = express();
 
-const port = process.env.PORT || 5000;
+app.use(express.static('client'))
+
+app.get('/', (req,res) => {
+    res.sendFile(path.join(__dirname, '../client/index.html'))
+ })
+
+
 
 var Rollbar = require("rollbar");
 var rollbar = new Rollbar({
@@ -13,11 +19,9 @@ var rollbar = new Rollbar({
   captureUnhandledRejections: true
 });
 
-app.use('/js', express.static(path.join(__dirname, 'client/main.js')))
+// app.use(cors());
 
-app.use(cors());
-app.use(express.static('client'))
-app.use(express.json());
+// app.use(express.json());
 
 const listCtrl = require("./controller")
 
@@ -26,12 +30,6 @@ const {
     getFortune,
     getAnswer
 } = listCtrl
-
-//  app.get('/main.js', (req,res) => {
-//     res.sendFile(path.join(__dirname, './client/main.js'))
-//  })
-
-
 
 app.get("/api/compliment", getCompliment);
 
@@ -79,7 +77,7 @@ if (quests[0].id>1){
     rollbar.log('user deleted a question');
 })
 
-
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server running on ${port}`));
 
