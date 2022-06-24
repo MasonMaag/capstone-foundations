@@ -6,6 +6,8 @@ const app = express();
 
 app.use(express.static('client'))
 
+app.use(express.json());
+
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'))
  })
@@ -21,7 +23,7 @@ var rollbar = new Rollbar({
 
 // app.use(cors());
 
-// app.use(express.json());
+
 
 const listCtrl = require("./controller")
 
