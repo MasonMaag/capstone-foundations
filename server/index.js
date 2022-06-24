@@ -1,12 +1,16 @@
 const express = require('express');
 const path = require('path')
-// const cors = require('cors');
+const cors = require('cors');
 
 const app = express();
+
+const port = process.env.PORT || 5000;
 
 app.use(express.static('client'))
 
 app.use(express.json());
+
+app.use(cors());
 
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'))
@@ -20,8 +24,6 @@ var rollbar = new Rollbar({
   captureUncaught: true,
   captureUnhandledRejections: true
 });
-
-// app.use(cors());
 
 
 
@@ -79,7 +81,7 @@ if (quests[0].id>1){
     rollbar.log('user deleted a question');
 })
 
-const port = process.env.PORT || 5000;
+
 
 app.listen(port, () => console.log(`Server running on ${port}`));
 
