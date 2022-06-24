@@ -28,7 +28,7 @@ h1 {
     height: fit-content;
     width: fit-content;
     background-color: rgb(113, 2, 113);
-    color: black;
+    color: white;
     padding:10px;
     font-weight: 900;
     font-size: 50px;
@@ -40,7 +40,7 @@ h1 {
 }
 
 #homeTag{
-    color: blueviolet;
+    color: white;
     font-size: 20px;
     font-weight: 700;
 }
@@ -64,6 +64,7 @@ h1 {
     border-width:10px;
     border-color: purple;
     border-style: groove;
+    background-color: rgba(0, 0, 0, 0.713)
 }
 
 #controls{

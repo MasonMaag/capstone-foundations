@@ -6,6 +6,11 @@ body{
     background-color: rgb(113, 2, 113);
 }
 
+button{
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -21,7 +26,7 @@ h1 {
     height: fit-content;
     width: fit-content;
     background-color: rgb(113, 2, 113);
-    color: black;
+    color: white;
     padding:10px;
     font-weight: 900;
     font-size: 50px;
@@ -33,7 +38,7 @@ h1 {
 }
 
 #gameTag{
-    color: blueviolet;
+    color: white;
     font-size: 20px;
     font-weight: 700;
 }
@@ -46,7 +51,7 @@ h1 {
     border-width:5px;
     width: fit-content;
     padding: 5px;
-    margin-left: 42.5%;
+    margin-left: 42.4%;
 }
 
 #ballPic {
@@ -54,7 +59,9 @@ h1 {
     border-style: double solid;
     border-width: 10px;
     border-color: purple rgba(196, 11, 221, 0.519);
-    box-shadow: 0px 0px 10px 20px rgb(22, 1, 35);
+    /* box-shadow: 0px 0px 20px 10px rgba(246, 246, 246, 0.289); */
+    box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.47);
+    margin-left: 20px;
 }
 
 #ballpiccon{
@@ -71,10 +78,11 @@ h1 {
 #compCon{
     background-color: rgba(153, 150, 150, 0.074);
     padding: 10px;
-    margin-right: 100px;
+    margin-right: 80px;
     border-width:10px;
     border-color: purple;
     border-style: groove;
+    /* box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.47); */
 }
 
 #compHead{
@@ -103,7 +111,7 @@ h1 {
 }
 
 #compbtncon{
-    margin-left: 39px;
+    margin-left: 55px;
     margin-top: 2%;
 }
 
@@ -114,6 +122,7 @@ h1 {
     border-width:10px;
     border-color: purple;
     border-style: groove;
+    /* box-shadow: 0px 0px 10px 1px white; */
 }
 
 #fortHead{
@@ -141,13 +150,13 @@ h1 {
 }
 
 #fortbtncon{
-    margin-left: 18px;
+    margin-left: 30px;
     margin-top: 2%;
 }
 
 #all {
     display: flex;
-    margin-left: 42.5%;
+    margin-left: 43.4%;
     padding:5px;
     font-weight: 800;
     font-size: large;
@@ -169,7 +178,7 @@ section {
     background-color: rgba(0, 0, 0, 0.713);
     text-align: center;
     margin-top: -20px;
-    padding: 1%
+    padding: 1%;
 }
 
 #askBtn{
@@ -194,6 +203,7 @@ section {
     border-width:10px;
     border-color: purple;
     border-style: groove;
+   
 }
 
 h3 {
@@ -224,7 +234,7 @@ h3 {
     width: fit-content;
     background-color: rgba(0, 0, 0, 0.713);
     padding:10px;
-    margin-left:2.4%;
+    margin-left:2.6%;
 }
 
 #createCon{
@@ -262,7 +272,7 @@ input {
 }
 
 #audio{
-    margin-left: 1.5%;
+    margin-left: 1.8%;
     margin-top: .5%;
 }
 
